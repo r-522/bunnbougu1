@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ja"><head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>在庫管理</title><link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="inventory">
+<header><h1>在庫照会・調整</h1><nav>
+  <a href="index.html">ダッシュボード</a><a href="products.html">商品</a><a href="inventory.html">在庫</a><a href="orders.html">受注</a><a href="shipments.html">出荷</a>
+</nav></header>
+<main>
+  <section class="card"><h2>在庫登録</h2>
+    <form id="inventory-form" class="grid">
+      <label>商品ID<input name="productId" type="number" required /></label>
+      <label>数量<input name="quantity" type="number" required /></label>
+      <label>保管場所<input name="location" required /></label>
+      <button type="submit">登録</button>
+    </form>
+  </section>
+  <section class="card"><h2>在庫調整</h2>
+    <form id="adjust-form" class="grid">
+      <label>在庫ID<input name="id" type="number" required /></label>
+      <label>増減数（例: -5）<input name="delta" type="number" required /></label>
+      <button type="submit">調整</button>
+    </form>
+  </section>
+  <section class="card"><h2>在庫一覧</h2><div id="inventory-table"></div></section>
+</main>
+<script src="js/app.js"></script>
+</body></html>

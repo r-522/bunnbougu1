@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ja"><head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>受注管理</title><link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="orders">
+<header><h1>受注登録・一覧</h1><nav>
+  <a href="index.html">ダッシュボード</a><a href="products.html">商品</a><a href="inventory.html">在庫</a><a href="orders.html">受注</a><a href="shipments.html">出荷</a>
+</nav></header>
+<main>
+  <section class="card"><h2>受注登録</h2>
+    <form id="order-form" class="grid">
+      <label>商品ID<input name="productId" type="number" required /></label>
+      <label>数量<input name="quantity" type="number" required /></label>
+      <label>顧客名<input name="customerName" required /></label>
+      <label>受注日<input name="orderDate" type="date" required /></label>
+      <label>ステータス
+        <select name="status"><option>新規</option><option>出荷準備中</option><option>完了</option></select>
+      </label>
+      <button type="submit">登録</button>
+    </form>
+  </section>
+  <section class="card"><h2>受注一覧</h2><div id="orders-table"></div></section>
+</main>
+<script src="js/app.js"></script>
+</body></html>

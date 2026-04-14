@@ -1,0 +1,60 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f6f7f9;
+  color: #222;
+}
+header {
+  background: #1f4f82;
+  color: #fff;
+  padding: 12px 20px;
+}
+nav a {
+  color: #fff;
+  margin-right: 12px;
+  text-decoration: none;
+}
+main {
+  max-width: 960px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 16px;
+  border-radius: 6px;
+}
+.card {
+  border: 1px solid #dcdfe4;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 14px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+}
+input, select, button {
+  padding: 8px;
+  margin-top: 4px;
+}
+button {
+  cursor: pointer;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+.notice {
+  background: #eef4ff;
+  border: 1px solid #bbd0ff;
+  padding: 8px;
+  margin: 10px 0;
+}
+.error {
+  color: #b20000;
+}
