@@ -1,0 +1,149 @@
+/*
+  UI基本方針（初心者にもわかりやすい画面）
+  - 禁止: 過度なグラデーション/ガラスモーフィズム/意味のないアニメーション
+  - 禁止: コントラスト不足テキスト/情報過密カード/装飾優先レイアウト
+  - 禁止: CTA乱立/ラベル不在のアイコン依存操作
+  - 採用: 余白と情報階層を優先した1カラム基調
+  - 採用: フォントは Noto Sans JP, Inter, system-ui を優先
+  - 採用: フォームはラベル常時表示、エラー文は平易な日本語
+  - 採用: JavaScriptは入力チェックと非同期通信のみ（ゼロJS思想の最小構成）
+*/
+
+:root {
+  --bg: #f7f8fa;
+  --surface: #ffffff;
+  --text: #1f2937;
+  --muted: #4b5563;
+  --border: #d1d5db;
+  --primary: #1d4ed8;
+  --primary-hover: #1e40af;
+  --danger: #b91c1c;
+  --max-width: 760px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Noto Sans JP", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-md);
+}
+
+section,
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: var(--space-lg);
+  margin-bottom: var(--space-md);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 var(--space-sm);
+  line-height: 1.4;
+}
+
+p {
+  margin: 0 0 var(--space-md);
+}
+
+small,
+.helper-text {
+  color: var(--muted);
+}
+
+form {
+  display: grid;
+  gap: var(--space-md);
+}
+
+label {
+  display: block;
+  margin-bottom: var(--space-xs);
+  font-weight: 600;
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: #fff;
+  color: var(--text);
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus-visible {
+  outline: 3px solid rgba(29, 78, 216, 0.25);
+  outline-offset: 1px;
+}
+
+.error-text {
+  margin-top: var(--space-xs);
+  color: var(--danger);
+  font-size: 0.95rem;
+}
+
+button,
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0 16px;
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+  background: var(--primary);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover,
+.btn-primary:hover {
+  background: var(--primary-hover);
+  border-color: var(--primary-hover);
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+/* 重要操作でもアイコン単体は不可: 必ずテキストラベルを併記する */
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
