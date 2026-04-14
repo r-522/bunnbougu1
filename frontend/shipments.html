@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ja"><head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>出荷処理</title><link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="shipments">
+<header><h1>出荷処理</h1><nav>
+  <a href="index.html">ダッシュボード</a><a href="products.html">商品</a><a href="inventory.html">在庫</a><a href="orders.html">受注</a><a href="shipments.html">出荷</a>
+</nav></header>
+<main>
+  <section class="card"><h2>出荷登録</h2>
+    <form id="shipment-form" class="grid">
+      <label>受注ID<input name="orderId" type="number" required /></label>
+      <label>商品ID<input name="productId" type="number" required /></label>
+      <label>出荷数<input name="shippedQuantity" type="number" required /></label>
+      <label>出荷日<input name="shippedDate" type="date" required /></label>
+      <label>配送会社<input name="carrier" required /></label>
+      <button type="submit">登録</button>
+    </form>
+  </section>
+  <section class="card"><h2>出荷一覧</h2><div id="shipments-table"></div></section>
+</main>
+<script src="js/app.js"></script>
+</body></html>

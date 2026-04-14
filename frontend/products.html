@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>商品一覧</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="products">
+<header><h1>商品一覧</h1><nav>
+  <a href="index.html">ダッシュボード</a><a href="products.html">商品</a><a href="inventory.html">在庫</a><a href="orders.html">受注</a><a href="shipments.html">出荷</a>
+</nav></header>
+<main>
+  <section class="card">
+    <h2>商品登録</h2>
+    <form id="product-form" class="grid">
+      <label>商品コード<input name="code" required /></label>
+      <label>商品名<input name="name" required /></label>
+      <label>カテゴリ<input name="category" required /></label>
+      <label>単価<input name="unitPrice" type="number" min="0" required /></label>
+      <button type="submit">登録</button>
+    </form>
+  </section>
+  <section class="card"><h2>商品一覧</h2><div id="products-table"></div></section>
+</main>
+<script src="js/app.js"></script>
+</body>
+</html>
